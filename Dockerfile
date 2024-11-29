@@ -4,8 +4,10 @@ ADD manifest.yaml /build/
 RUN go install go.opentelemetry.io/collector/cmd/builder@v${OTEL_VERSION}
 RUN builder --config=/build/manifest.yaml
 
+
 FROM alpine:3.20.3 AS certs
 RUN apk --update add ca-certificates
+
 
 FROM scratch
 ARG USER_UID=10001
