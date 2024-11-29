@@ -42,7 +42,7 @@ jobs:
         with:
           overrideConfig: |
             update-build-number=false
-            next-version=${{ needs.build.outputs.version }}
+            next-version=${{ needs.version.outputs.build }}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@f95db51fddba0c2d1ec667646a06c2ce06100226 # v3.0.0
