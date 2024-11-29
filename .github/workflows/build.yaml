@@ -28,7 +28,7 @@ jobs:
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v3.0.3
         with:
-          versionSpec: '6.0.0'
+          versionSpec: '6.x'
 
       - name: Get VERSION from File
         id: version_file
@@ -66,6 +66,5 @@ jobs:
         with:
           context: .
           tags: |
-            ${{ steps.meta.outputs.tags }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:v${{ env.fullSemVer }}
           labels: ${{ steps.meta.outputs.labels }}
