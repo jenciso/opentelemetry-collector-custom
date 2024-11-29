@@ -1,1 +1,3 @@
-#mode: Mainline
+workflow: GitHubFlow/v1
+next-version: 0.114.0
+
