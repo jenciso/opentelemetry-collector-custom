@@ -1,6 +1,6 @@
 dist:
   name: os-otel-collector
-  description: Basic OTel Collector distribution
+  description: Basic OTel Collector distribution Custom
   output_path: /tmp/dist
   version: 0.114.0
 
